@@ -16,16 +16,19 @@ const QRCheck: React.FC = () => {
   useEffect(() => {
     const codesFound = new Set(JSON.parse(localStorage.getItem('qrHuntCodesFound')))
 
-    const remaining = qrHuntCodes.length - codesFound.size
+    let remaining = qrHuntCodes.length - codesFound.size
     if (remaining === 0) setState('found')
 
     // All valid codes must be included:
-    for (const code of qrHuntCodes) if (!codesFound.has(code)) setState('notfound')
+    for (const code of qrHuntCodes) if (!codesFound.has(code)) {
+      remaining = -1
+      setState('notfound')
+    }
 
     if (localStorage.getItem('qrHuntCodesClaimed')) setState('claimed')
     
     // Mark the hunt as claimed
-    if (state === 'found') localStorage.setItem('qrHuntCodesClaimed', 'true')
+    if (remaining === 0) localStorage.setItem('qrHuntCodesClaimed', 'true')
   }, [])
 
   return <Layout center>
