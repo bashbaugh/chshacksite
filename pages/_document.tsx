@@ -10,7 +10,11 @@ export default class extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+        </Head>
         <body>
           <InitializeColorMode />
           <Main />
