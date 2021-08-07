@@ -5,9 +5,10 @@ const code = {
   '.comment': {
     fontStyle: 'italic'
   },
-  '.property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .regex, .important, .variable': {
-    color: 'red'
-  },
+  '.property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .regex, .important, .variable':
+    {
+      color: 'red'
+    },
   '.atrule, .attr-value, .keyword': {
     color: 'blue'
   },
@@ -81,8 +82,7 @@ const theme = {
   fonts: {
     heading:
       'Nunito, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    body:
-      'Nunito, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    body: 'Nunito, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     monospace: '"SF Mono", "Roboto Mono", Menlo, Consolas, monospace'
   },
   lineHeights: {
@@ -411,7 +411,7 @@ const theme = {
     a: {
       color: 'primary',
       textDecoration: 'underline',
-      textUnderlinePosition: 'under',
+      textUnderlinePosition: 'under'
       // ':focus,:hover': {
       //   textDecorationStyle: 'wavy'
       // }

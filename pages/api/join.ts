@@ -3,10 +3,10 @@ import Airtable from 'airtable-plus'
 const table = new Airtable({
   baseID: process.env.MEMBERS_BASE_ID,
   apiKey: process.env.AIRTABLE_API_KEY,
-  tableName: 'submissions',
+  tableName: 'submissions'
 })
 
-export default async function handler (req, res) {
+export default async function handler(req, res) {
   const data = req.body
 
   try {
