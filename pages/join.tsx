@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import { Flex, Heading, Input, Card, Label, Button, Radio } from "theme-ui"
+import { Flex, Heading, Input, Card, Label, Button, Radio, Select } from "theme-ui"
 import Link from 'next/link'
 import { useForm, SubmitHandler } from "react-hook-form"
 import axios from 'axios'
@@ -12,6 +12,7 @@ interface JoinFormValues {
   pronouns: string
   grade: '9' | '10' | '11' | '12'
   number: string
+  experience: string
 }
 
 const Home: React.FC = () => {
@@ -32,7 +33,7 @@ const Home: React.FC = () => {
   return <Layout>
     <Flex sx={{
       mx: 'auto',
-      width: 'narrow',
+      maxWidth: 'narrow',
       alignItems: 'center',
       textAlign: 'center',
       flexDirection: 'column',
@@ -42,7 +43,7 @@ const Home: React.FC = () => {
         fontSize: 5
       }}>Join CHS Hack Club</Heading>
       {!joined && <form onSubmit={handleSubmit(onSubmit)}>
-        <Card variant='sunken' sx={{ width: 'narrow', mb: 5 }}>
+        <Card variant='sunken' sx={{ maxWidth: 'narrow', mb: 5 }}>
           <Label>
             Your BVSD Email
             <Input type='email' required {...register('email')} placeholder='myemail01@bvsd.org' />
@@ -79,6 +80,17 @@ const Home: React.FC = () => {
           <Label>
             Phone Number
             <Input type='tel' required {...register('number')} placeholder='3031234567' />
+          </Label>
+
+          <Label>
+            Coding Experience
+            <Select {...register('experience')} required>
+              <option value="new">I've never programmed before 🤷🏼</option>
+              <option value="beginner">I've taken an introductory class or equivalent 🧐</option>
+              <option value="intermediate">I've built a few small projects 😊</option>
+              <option value="advanced">I'm very good at coding and have built several projects 👍🏾</option>
+              <option value="expert">I'm an expert 😎</option>
+            </Select>
           </Label>
 
           <Button

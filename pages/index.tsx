@@ -1,8 +1,8 @@
  /** @jsxImportSource theme-ui */ 
 
 import Layout from "components/layout";
-import { Box, Button, Card, Flex, Heading, Image, Paragraph } from "theme-ui"
-import Link from 'next/link'
+import { Box, Button, Card, Flex, Heading, Link, Paragraph } from "theme-ui"
+import NLink from 'next/link'
 import { useRouter } from "next/dist/client/router";
 import ConfettiGenerator from 'confetti-js'
 import { useEffect, useRef, useState } from "react";
@@ -81,13 +81,13 @@ const Home: React.FC = () => {
         fontSize: 5
       }}>Centaurus Hack Club</Heading>
       <Paragraph sx={{ fontSize: 2, color: 'slate' }}>
-        Hack Club is a new coding club at Centaurus! Come build websites, apps, games, hardware projects, and more! Open to <strong>all</strong> experience levels, from complete beginner to coding god. 
+        Hack Club is a new coding club at Centaurus, and a chapter of the international <Link href='https://hackclub.com/' target='_blank' rel='noopener'>Hack Club</Link>. Come build websites, apps, games, hardware projects, and more! Open to <strong>all</strong> experience levels, from complete beginner to coding god. More info coming soon!
       </Paragraph>
-      <Link href='/join'>
+      <NLink href='/join'>
         <Button variant='ctaLg'>
           Join Now
         </Button>
-      </Link>
+      </NLink>
     </Flex>
   </Layout>
 }
