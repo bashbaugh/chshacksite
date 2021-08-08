@@ -1,7 +1,5 @@
 /** @jsxImportSource theme-ui */
 import { memo, useEffect, useRef } from 'react'
-import { Box, Container, Flex } from 'theme-ui'
-import Navbar from './nav'
 import Paper from 'paper'
 
 const GRAVITY = 3
@@ -61,7 +59,6 @@ const MouseBlobs: React.FC = props => {
 
     draw()
 
-    // TODO listener cleanup
     return () => {
       Paper.view.remove()
     }

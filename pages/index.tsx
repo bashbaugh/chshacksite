@@ -17,9 +17,8 @@ import ConfettiGenerator from 'confetti-js'
 import { useEffect, useRef, useState } from 'react'
 import MouseBlobs from 'components/MouseBlobs'
 
-// These are just hardcoded so it's easy to cheat by just finding them in the source or bundle.
-// Ideally they'd be checked server-side but this is easier and it doesn't really matter
-export const qrHuntCodes = ['hax', '615', 'ceh', 'ben', 'yee']
+// Ideally codes would be checked server-side to prevent cheating by searching the bundle, but this is easier and it doesn't really matter
+export const qrHuntCodes = process.env.QR_HUNT_CODES.split(',')
 
 const Home: React.FC = () => {
   const router = useRouter()
@@ -35,7 +34,7 @@ const Home: React.FC = () => {
   console.log(darkTheme)
 
   let fromQr = router.query.fromQr as string
-  if (!qrHuntCodes.includes(fromQr)) fromQr = null // Check that code is invalid
+  if (!qrHuntCodes.includes(fromQr)) fromQr = null // Check that code is valid
 
   const [codesRemaining, setCodesRemaining] = useState(5)
 

@@ -10,4 +10,7 @@ module.exports = withMDX({
       },
     ]
   },
+  env: {
+    QR_HUNT_CODES: process.env.QR_HUNT_CODES
+  }
 })
