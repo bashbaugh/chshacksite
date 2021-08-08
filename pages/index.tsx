@@ -1,17 +1,27 @@
 /** @jsxImportSource theme-ui */
 
 import Layout from 'components/layout'
-import { Box, Button, Card, Flex, Heading, Link, Paragraph } from 'theme-ui'
+import { Box, Button, Card, Flex, Heading, Link, Paragraph, useColorMode } from 'theme-ui'
 import NLink from 'next/link'
 import { useRouter } from 'next/dist/client/router'
 import ConfettiGenerator from 'confetti-js'
 import { useEffect, useRef, useState } from 'react'
+import MouseBlobs from 'components/MouseBlobs'
 
+// These are just hardcoded so it's easy to cheat by just finding them in the source or bundle.
+// Ideally they'd be checked server-side but this is easier and it doesn't really matter
 export const qrHuntCodes = ['hax', '615', 'ceh', 'ben', 'yee']
 
 const Home: React.FC = () => {
   const router = useRouter()
   const confettiCanvasRef = useRef()
+
+  // We have to create our own state variable to work around a bug on first load
+  const [darkTheme, _setDarkTheme] = useState(false)
+  const _darkTheme = useColorMode()[0] === 'dark'
+  useEffect(() => { _setDarkTheme(_darkTheme)}, [_darkTheme])
+
+  console.log(darkTheme)
 
   let fromQr = router.query.fromQr as string
   if (!qrHuntCodes.includes(fromQr)) fromQr = null // Check that code is invalid
@@ -58,6 +68,7 @@ const Home: React.FC = () => {
 
   return (
     <Layout center>
+      <MouseBlobs />
       <Flex
         sx={{
           mx: 'auto',
@@ -118,7 +129,7 @@ const Home: React.FC = () => {
         >
           Centaurus Hack Club
         </Heading>
-        <Paragraph sx={{ fontSize: 2, color: 'slate' }}>
+        <Paragraph sx={{ fontSize: 2, color: darkTheme ? 'smoke' : 'slate' }}>
           Hack Club is a new coding club at Centaurus, and a chapter of the
           international{' '}
           <Link href="https://hackclub.com/" target="_blank" rel="noopener">
