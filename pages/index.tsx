@@ -1,7 +1,16 @@
 /** @jsxImportSource theme-ui */
 
 import Layout from 'components/layout'
-import { Box, Button, Card, Flex, Heading, Link, Paragraph, useColorMode } from 'theme-ui'
+import {
+  Box,
+  Button,
+  Card,
+  Flex,
+  Heading,
+  Link,
+  Paragraph,
+  useColorMode
+} from 'theme-ui'
 import NLink from 'next/link'
 import { useRouter } from 'next/dist/client/router'
 import ConfettiGenerator from 'confetti-js'
@@ -19,7 +28,9 @@ const Home: React.FC = () => {
   // We have to create our own state variable to work around a bug on first load
   const [darkTheme, _setDarkTheme] = useState(false)
   const _darkTheme = useColorMode()[0] === 'dark'
-  useEffect(() => { _setDarkTheme(_darkTheme)}, [_darkTheme])
+  useEffect(() => {
+    _setDarkTheme(_darkTheme)
+  }, [_darkTheme])
 
   console.log(darkTheme)
 

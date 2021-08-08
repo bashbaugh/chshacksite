@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.16",
+    "acorn": "^8.4.1",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   }

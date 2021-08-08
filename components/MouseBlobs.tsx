@@ -2,7 +2,7 @@
 import { memo, useEffect, useRef } from 'react'
 import { Box, Container, Flex } from 'theme-ui'
 import Navbar from './nav'
-import Paper, { Path } from 'paper'
+import Paper from 'paper'
 
 const GRAVITY = 3
 const MAXBLOBS = 1000
@@ -15,7 +15,7 @@ class Blob {
   splatPointY: number
 
   constructor(event: paper.ToolEvent) {
-    this.path = new Path.Circle({
+    this.path = new Paper.Path.Circle({
       center: event.middlePoint,
       radius: Math.floor(Math.random() * 10) + 3,
       fillColor: {
