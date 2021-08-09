@@ -11,7 +11,7 @@
     "format": "prettier --write \"**/*.{ts,tsx}\""
   },
   "dependencies": {
-    "@hackclub/meta": "^1.1.0",
+    "@hackclub/icons": "^0.0.9",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.0.4",
     "airtable-plus": "^1.0.4",

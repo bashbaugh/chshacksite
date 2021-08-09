@@ -1,5 +1,4 @@
 /** @jsxImportSource theme-ui */
-
 import Layout from 'components/layout'
 import {
   Box,
@@ -9,13 +8,18 @@ import {
   Heading,
   Link,
   Paragraph,
-  useColorMode
+  useColorMode,
+  Text
 } from 'theme-ui'
 import NLink from 'next/link'
 import { useRouter } from 'next/dist/client/router'
 import ConfettiGenerator from 'confetti-js'
 import { useEffect, useRef, useState } from 'react'
 import MouseBlobs from 'components/MouseBlobs'
+import NImage from 'next/image'
+import Icon from '@hackclub/icons'
+
+import benjaminImage from '../public/ben_trainedit_square.png'
 
 // Ideally codes would be checked server-side to prevent cheating by searching the bundle, but this is easier and it doesn't really matter
 export const qrHuntCodes = process.env.QR_HUNT_CODES.split(',')
@@ -82,8 +86,10 @@ const Home: React.FC = () => {
       <Flex
         sx={{
           mx: 'auto',
+          height: '80vh',
           maxWidth: 'narrow',
           alignItems: 'center',
+          justifyContent: 'center',
           textAlign: 'center',
           flexDirection: 'column',
           gap: 4
@@ -152,6 +158,38 @@ const Home: React.FC = () => {
         <NLink href="/join">
           <Button variant="ctaLg">Join Now</Button>
         </NLink>
+      </Flex>
+      <Flex sx={{
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 5,
+        my: 6
+      }}>
+        <Heading sx={{ fontSize: 4 }}>Leadership</Heading>
+        <Flex sx={{ gap: 3, alignItems: 'center' }}>
+          <NImage
+            src={benjaminImage}
+            alt='Benjamin Ashbaugh'
+            width={150}
+            height={150}
+            quality={85}
+            sx={{
+              borderRadius: '50%'
+            }}
+          />
+          <Flex sx={{ flexDirection: 'column' }}>
+            <Heading>Benjamin Ashbaugh</Heading>
+            <Text variant='caption'>founder, he/him</Text>
+            <div sx={{ py: 3 }}>
+              <a href='mailto:benjamin@chshack.club'>
+                <Button variant='outline'>
+                  <Icon glyph="email-fill" size={20} />
+                  contact
+                </Button>
+              </a>
+            </div>
+          </Flex>
+        </Flex>
       </Flex>
     </Layout>
   )

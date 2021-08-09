@@ -1,5 +1,6 @@
 import * as React from 'react'
 import NextApp from 'next/app'
+import '../public/globals.css'
 
 // import '@hackclub/theme/fonts/reg-bold.css'
 import theme from '../theme'

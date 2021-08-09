@@ -16,12 +16,15 @@ const Layout: React.FC<{
       sx={{
         flexGrow: 1,
         display: 'flex',
+        flexDirection: 'column',
         alignItems: center && 'center',
         justifyContent: center && 'center',
         maxWidth: 'copyPlus'
       }}
     >
-      {children}
+      <Box as='main'>
+        {children}
+      </Box>
     </Container>
   </Flex>
 )

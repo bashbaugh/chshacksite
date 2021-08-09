@@ -411,10 +411,10 @@ const theme = {
     a: {
       color: 'primary',
       textDecoration: 'underline',
-      textUnderlinePosition: 'under'
-      // ':focus,:hover': {
-      //   textDecorationStyle: 'wavy'
-      // }
+      textUnderlinePosition: 'under',
+      ':focus,:hover': {
+        textDecorationStyle: 'wavy'
+      }
     },
     pre: {
       fontFamily: 'monospace',
