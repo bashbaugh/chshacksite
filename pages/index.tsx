@@ -165,7 +165,7 @@ const Home: React.FC = () => {
         gap: 5,
         my: 6
       }}>
-        <Heading sx={{ fontSize: 4 }}>Leadership</Heading>
+        <Heading sx={{ fontSize: 4 }} id='leadership'>Leadership</Heading>
         <Flex sx={{ gap: 3, alignItems: 'center' }}>
           <NImage
             src={benjaminImage}
@@ -173,6 +173,7 @@ const Home: React.FC = () => {
             width={150}
             height={150}
             quality={85}
+            title='Photo credit: Kunal Botla'
             sx={{
               borderRadius: '50%'
             }}

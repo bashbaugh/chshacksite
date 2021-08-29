@@ -26,6 +26,7 @@ export default class extends Document {
           <InitializeColorMode />
           <Main />
           <NextScript />
+          <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
         </body>
       </Html>
     )
