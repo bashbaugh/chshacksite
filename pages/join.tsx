@@ -103,15 +103,14 @@ const Home: React.FC = () => {
                 </Flex>
               </Label>
 
-              <Label>
+              {/*<Label>
                 Phone Number
                 <Input
                   type="tel"
-                  required
                   {...register('number')}
                   placeholder="3031234567"
                 />
-              </Label>
+              </Label>*/}
 
               <Label>
                 Coding Experience
