@@ -22,9 +22,7 @@ const Layout: React.FC<{
         maxWidth: 'copyPlus'
       }}
     >
-      <Box as='main'>
-        {children}
-      </Box>
+      <Box as="main">{children}</Box>
     </Container>
   </Flex>
 )

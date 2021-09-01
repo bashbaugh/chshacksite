@@ -18,6 +18,7 @@ import { useEffect, useRef, useState } from 'react'
 import MouseBlobs from 'components/MouseBlobs'
 import NImage from 'next/image'
 import Icon from '@hackclub/icons'
+import Head from 'next/head'
 
 import benjaminImage from '../public/ben_trainedit_square.png'
 
@@ -82,6 +83,14 @@ const Home: React.FC = () => {
 
   return (
     <Layout center>
+      <Head>
+        <title>Centaurus Hack Club</title>
+        <meta
+          name="description"
+          content="We are a group of students from Lafayette, Colorado, sharing our love for making by coding apps, websites, games and more."
+        />
+      </Head>
+
       <MouseBlobs />
       <Flex
         sx={{
@@ -159,31 +168,35 @@ const Home: React.FC = () => {
           <Button variant="ctaLg">Join Now</Button>
         </NLink>
       </Flex>
-      <Flex sx={{
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 5,
-        my: 6
-      }}>
-        <Heading sx={{ fontSize: 4 }} id='leadership'>Leadership</Heading>
+      <Flex
+        sx={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 5,
+          my: 6
+        }}
+      >
+        <Heading sx={{ fontSize: 4 }} id="leadership">
+          Leadership
+        </Heading>
         <Flex sx={{ gap: 3, alignItems: 'center' }}>
           <NImage
             src={benjaminImage}
-            alt='Benjamin Ashbaugh'
+            alt="Benjamin Ashbaugh"
             width={150}
             height={150}
             quality={85}
-            title='Photo credit: Kunal Botla'
+            title="Photo credit: Kunal Botla"
             sx={{
               borderRadius: '50%'
             }}
           />
           <Flex sx={{ flexDirection: 'column' }}>
             <Heading>Benjamin Ashbaugh</Heading>
-            <Text variant='caption'>founder, he/him</Text>
+            <Text variant="caption">founder, he/him</Text>
             <div sx={{ py: 3 }}>
-              <a href='mailto:benjamin@chshack.club'>
-                <Button variant='outline'>
+              <a href="mailto:benjamin@chshack.club">
+                <Button variant="outline">
                   <Icon glyph="email-fill" size={20} />
                   contact
                 </Button>

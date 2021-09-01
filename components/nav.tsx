@@ -1,11 +1,11 @@
 import { Box, Container, Flex, Image, Link } from 'theme-ui'
 import NLink from 'next/link'
 
-const NavLink = ({ href, children }) => <NLink href={href}>
-  <a>
-    {children}
-  </a>
-</NLink>
+const NavLink = ({ href, children }) => (
+  <NLink href={href}>
+    <a>{children}</a>
+  </NLink>
+)
 
 const Navbar: React.FC = () => (
   <Container>
@@ -18,10 +18,12 @@ const Navbar: React.FC = () => (
     >
       <NLink href="/">
         <a>
-          <Flex sx={{
-            alignItems: 'center',
-            gap: 2
-          }}>
+          <Flex
+            sx={{
+              alignItems: 'center',
+              gap: 2
+            }}
+          >
             <Image
               sx={{ width: 140 }}
               src="/flag-orpheus-top.svg"
