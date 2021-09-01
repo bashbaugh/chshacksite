@@ -86,7 +86,7 @@ const Home: React.FC = () => {
       <Flex
         sx={{
           mx: 'auto',
-          height: '80vh',
+          minHeight: '80vh',
           maxWidth: 'narrow',
           alignItems: 'center',
           justifyContent: 'center',
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
           </Link>
           . Come build websites, apps, games, hardware projects, and more! Open
           to <strong>all</strong> experience levels, from complete beginner to
-          coding god. More info coming soon!
+          coding legend. Starting September 14.
         </Paragraph>
         <NLink href="/join">
           <Button variant="ctaLg">Join Now</Button>
