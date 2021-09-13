@@ -21,6 +21,7 @@ export default class extends Document {
             href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,400;1,600;1,700;1,800&display=swap"
             rel="stylesheet"
           />
+          <script dangerouslySetInnerHTML={{ __html: 'window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};'}} />
         </Head>
         <body>
           <InitializeColorMode />

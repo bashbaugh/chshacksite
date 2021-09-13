@@ -21,6 +21,7 @@ import Icon from '@hackclub/icons'
 import Head from 'next/head'
 
 import benjaminImage from '../public/ben_trainedit_square.png'
+import axios from 'axios'
 
 // Ideally codes would be checked server-side to prevent cheating by searching the bundle, but this is easier and it doesn't really matter
 export const qrHuntCodes = process.env.QR_HUNT_CODES.split(',')
@@ -45,6 +46,11 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     if (fromQr) {
+      try {
+        // Simple Analytics event
+        (window as any).sa_event(`qr_${fromQr}`)
+      } catch {}
+
       const confetti = new ConfettiGenerator({
         target: confettiCanvasRef.current,
         max: '100',
