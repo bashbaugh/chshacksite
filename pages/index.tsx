@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 import Layout from 'components/layout'
 import {
-  Box,
   Button,
   Card,
   Flex,
@@ -21,7 +20,6 @@ import Icon from '@hackclub/icons'
 import Head from 'next/head'
 
 import benjaminImage from '../public/ben_trainedit_square.png'
-import axios from 'axios'
 
 // Ideally codes would be checked server-side to prevent cheating by searching the bundle, but this is easier and it doesn't really matter
 export const qrHuntCodes = process.env.QR_HUNT_CODES.split(',')
