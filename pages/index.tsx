@@ -166,7 +166,7 @@ const Home: React.FC = () => {
           </Link>
           . Come build websites, apps, games, hardware projects, and more! Open
           to <strong>all</strong> experience levels, from complete beginner to
-          coding legend. Starting September 14.
+          coding legend. We usually meet every other week in room 206.
         </Paragraph>
         <NLink href="/join">
           <Button variant="ctaLg">Join Now</Button>
