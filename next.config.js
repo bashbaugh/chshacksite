@@ -8,6 +8,11 @@ module.exports = withMDX({
         destination: '/?fromQr=:slug',
         permanent: false,
       },
+      {
+        source: '/incoming',
+        destination: 'https://airtable.com/shrmhTlkdQAAXxLsw',
+        permanent: false,
+      },
     ]
   },
   env: {
