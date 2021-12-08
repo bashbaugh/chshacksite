@@ -20,6 +20,7 @@ import Icon from '@hackclub/icons'
 import Head from 'next/head'
 
 import benjaminImage from '../public/ben_trainedit_square.png'
+import stickermuleImage from '../public/img/sponsor/stickermule.png'
 
 // Ideally codes would be checked server-side to prevent cheating by searching the bundle, but this is easier and it doesn't really matter
 export const qrHuntCodes = process.env.QR_HUNT_CODES.split(',')
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
     if (fromQr) {
       try {
         // Simple Analytics event
-        (window as any).sa_event(`qr_${fromQr}`)
+        ;(window as any).sa_event(`qr_${fromQr}`)
       } catch {}
 
       const confetti = new ConfettiGenerator({
@@ -159,14 +160,14 @@ const Home: React.FC = () => {
           Centaurus Hack Club
         </Heading>
         <Paragraph sx={{ fontSize: 2, color: darkTheme ? 'smoke' : 'slate' }}>
-          Hack Club is a new coding club at Centaurus, and a chapter of the
+          Hack Club is Centaurus's coding club, and a chapter of the
           international{' '}
           <Link href="https://hackclub.com/" target="_blank" rel="noopener">
             Hack Club
           </Link>
           . Come build websites, apps, games, hardware projects, and more! Open
-          to <strong>all</strong> experience levels, from complete beginner to
-          coding legend. We usually meet every other week in room 206.
+          to <strong>all</strong> experience levels. Stay tuned for
+          announcements about next semester!
         </Paragraph>
         <NLink href="/join">
           <Button variant="ctaLg">Join Now</Button>
@@ -208,6 +209,19 @@ const Home: React.FC = () => {
             </div>
           </Flex>
         </Flex>
+        <Heading sx={{ fontSize: 4 }} id="sponsors">
+          Sponsors
+        </Heading>
+        <a href="https://stickermule.com/">
+          <NImage
+            src={stickermuleImage}
+            alt="Sticker Mule"
+            height={150}
+            width={200}
+            objectFit="contain"
+            quality={60}
+          />
+        </a>
       </Flex>
     </Layout>
   )

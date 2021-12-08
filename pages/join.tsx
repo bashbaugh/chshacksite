@@ -140,7 +140,8 @@ const Home: React.FC = () => {
         )}
         {joined && (
           <div>
-            Yay! We've received your application, and will send you info about our next meeting as soon as possible!
+            Yay! We've received your application, and will send you info about
+            our next meeting as soon as possible!
           </div>
         )}
       </Flex>
