@@ -19,7 +19,7 @@ import NImage from 'next/image'
 import Icon from '@hackclub/icons'
 import Head from 'next/head'
 
-import benjaminImage from '../public/ben_trainedit_square.png'
+import benjaminImage from '../public/img/benjamin1.png'
 import stickermuleImage from '../public/img/sponsor/stickermule.png'
 
 // Ideally codes would be checked server-side to prevent cheating by searching the bundle, but this is easier and it doesn't really matter
@@ -35,8 +35,6 @@ const Home: React.FC = () => {
   useEffect(() => {
     _setDarkTheme(_darkTheme)
   }, [_darkTheme])
-
-  console.log(darkTheme)
 
   let fromQr = router.query.fromQr as string
   if (!qrHuntCodes.includes(fromQr)) fromQr = null // Check that code is valid
@@ -167,7 +165,7 @@ const Home: React.FC = () => {
           </Link>
           . Come build websites, apps, games, hardware projects, and more! Open
           to <strong>all</strong> experience levels. Stay tuned for
-          announcements about next semester!
+          announcements about our first meeting, coming soon!
         </Paragraph>
         <NLink href="/join">
           <Button variant="ctaLg">Join Now</Button>
@@ -209,7 +207,7 @@ const Home: React.FC = () => {
             </div>
           </Flex>
         </Flex>
-        <Heading sx={{ fontSize: 4 }} id="sponsors">
+        {/* <Heading sx={{ fontSize: 4 }} id="sponsors">
           Sponsors
         </Heading>
         <a href="https://stickermule.com/">
@@ -221,7 +219,7 @@ const Home: React.FC = () => {
             objectFit="contain"
             quality={60}
           />
-        </a>
+        </a> */}
       </Flex>
     </Layout>
   )
