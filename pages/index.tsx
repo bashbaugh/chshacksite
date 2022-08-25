@@ -20,6 +20,7 @@ import Icon from '@hackclub/icons'
 import Head from 'next/head'
 
 import benjaminImage from '../public/img/benjamin1.png'
+import samImage from '../public/img/sam.png'
 import stickermuleImage from '../public/img/sponsor/stickermule.png'
 
 // Ideally codes would be checked server-side to prevent cheating by searching the bundle, but this is easier and it doesn't really matter
@@ -199,6 +200,29 @@ const Home: React.FC = () => {
             <Text variant="caption">founder, he/him</Text>
             <div sx={{ py: 3 }}>
               <a href="mailto:benjamin@chshack.club">
+                <Button variant="outline">
+                  <Icon glyph="email-fill" size={20} />
+                  contact
+                </Button>
+              </a>
+            </div>
+          </Flex>
+          <NImage
+            src={samImage}
+            alt="Sam Sterritt"
+            width={150}
+            height={150}
+            quality={85}
+            title="Sam Sterritt"
+            sx={{
+              borderRadius: '50%'
+            }}
+          />
+          <Flex sx={{ flexDirection: 'column' }}>
+            <Heading>Sam Sterritt</Heading>
+            <Text variant="caption">coleader, she/her</Text>
+            <div sx={{ py: 3 }}>
+              <a href="mailto:sam@chshack.club">
                 <Button variant="outline">
                   <Icon glyph="email-fill" size={20} />
                   contact
